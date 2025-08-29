@@ -1,16 +1,16 @@
-pipeline {
+pipeline{
     agent any
-    stages {
-        stage('version') {
-            steps {
-                bat '"C:\\Users\\kabilan\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" --version'
+    stages{
+        stage('version'){
+            steps{
+                sh 'python3 --version'
             }
         }
-
-        stage('hello') {
-            steps {
-                bat '"C:\\Users\\kabilan\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" demo.py'
+        stage('hello'){
+            steps{
+                sh 'python3 demoxy.py'
             }
         }
     }
+
 }
